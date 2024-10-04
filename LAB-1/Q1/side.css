@@ -1,0 +1,16 @@
+table {
+    width: 100%;
+    padding: 0;
+}
+#One {
+    border: 1px solid black;
+    height: 870px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#Two {
+    border: 1px solid black;
+    width: 50%;
+    height: 870px;
+}

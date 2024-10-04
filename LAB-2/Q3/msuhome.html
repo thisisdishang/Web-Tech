@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }        
+        body {
+            line-height: 1.7;
+            color: #000;
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #fff;
+        }        
+        #div1 {
+            background-color: #0098DB;
+        }        
+        #div1_1 {
+            margin-left: 7%;
+            margin-right: 7%;
+            display: flex;
+            justify-content: space-between;
+        }        
+        .div1_ul1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 50%;
+            padding-top: 5px;
+            padding-bottom: 15px;
+            font-size: 12px;
+            color: #fff;
+            list-style: none;
+        }        
+        .div1_ul2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 15%;
+            padding-top: 5px;
+            padding-bottom: 15px;
+            list-style: none;
+            font-size: 12px;
+        }        
+        .div1_img {
+            width: 1.2em;
+            height: 1.2em;
+        }        
+        #div2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }        
+        #div2 h1 {
+            text-transform: uppercase;
+            font-family: Calibri;
+            font-weight: 700;
+            padding-top: 30px;
+        }        
+        #div2_1 {
+            margin-left: 7%;
+            margin-right: 7%;
+            display: grid;
+            grid-template-columns: 10% 80% 10%;
+        }        
+        .div2_img {
+            max-height: 100px;
+            max-width: 100%;
+        }        
+        #div3 {
+            background-color: #202C45;
+            padding: 15px 0;
+        }        
+        .div3_ul1 {
+            display: flex;
+            width: 80%;
+            list-style: none;
+            color: #fff;
+            justify-content: space-around;
+            font-size: 15px;
+            font-weight: 500;
+        }        
+        #div3_1 {
+            display: flex;
+            margin-left: 7%;
+            margin-right: 7%;
+            justify-content: center;
+        }        
+        .div3_img {
+            width: 1.5em;
+            height: 1.5em;
+        }        
+        #div4 {
+            display: flex;
+            background-color: #0098DB;
+        }        
+        #div4 div:nth-of-type(2) {
+            flex-basis: 70%;
+            margin-bottom: -5px;
+        }        
+        .div4_ul {
+            list-style: none;
+            text-decoration: none;
+            color: white;
+            padding: 0px 24px;
+        }        
+        .div4_li {
+            padding: 12px 0px;
+            border-bottom: 1px solid black;
+        }        
+        .div4_img {
+            width: 100%;
+            max-height: 294px;
+        }        
+        #div5_1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+            margin-left: 7%;
+            margin-right: 7%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }        
+        .div5_1_1 {
+            width: 15%;
+            height: 40px;
+            color: white;
+            font-weight: 400;
+            text-align: center;
+            padding: 10px 0px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }        
+        .div5_img {
+            width: 1.2em;
+            height: 1.2em;
+        }        
+        #div6 {
+            display: flex;
+            justify-content: center;
+            background-color: #0098DB;
+        }        
+        .div6_img {
+            width: 10%;
+            height: 30px;
+            padding: 0.5em 1em;
+        }        
+        .div6_ul1 {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            color: white;
+        }        
+        .div6_li {
+            padding: 10px 0px;
+        }        
+        #div6 ul {
+            flex-basis: 70%;
+        }        
+        #div7 {
+            background-color: rgb(32, 44, 69, 0.9);
+            margin-top: 20px;
+        }        
+        #div7_1 {
+            display: flex;
+            margin-left: 7%;
+            margin-right: 7%;
+        }        
+        #div7_1 div:nth-of-type(1) {
+            flex-basis: 80%
+        }        
+        .div7_h3 {
+            color: #d3d3d3;
+            font-weight: 600;
+            font-size: 24px;
+            padding-top: 20px;
+        }        
+        .div7_h4 {
+            color: #fff;
+            font-weight: 600;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }        
+        .div7_p {
+            color: white;
+            margin-bottom: 20px;
+        }        
+        .div7_img {
+            max-width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }        
+        #div8_1 {
+            display: grid;
+            grid-template-columns: 48% 48%;
+            justify-content: space-between;
+            margin-left: 7%;
+            margin-right: 7%;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }        
+        .div8_icon {
+            width: 1.2em;
+            height: 1.2em;
+        }        
+        .div8_h3 {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: 200;
+        }        
+        .div8_span {
+            padding: 5px 15px;
+            color: white;
+            background-color: #0098DB;
+        }        
+        .line-bottom {
+            position: relative;
+            padding-bottom: 10px;
+        }        
+        .line-bottom:after,
+        .line-bottom-center:after {
+            background: #0098DB !important;
+        }        
+        .line-bottom:after {
+            bottom: -1px;
+            content: "";
+            height: 2px;
+            left: 0;
+            position: absolute;
+            width: 50px;
+        }        
+        #div9_1 {
+            margin-left: 7%;
+            margin-right: 7%;
+            display: grid;
+            grid-template-columns: 48% 48%;
+            justify-content: space-between;
+        }        
+        .div9_1_1 {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #eeeeee;
+            border-left: 6px solid #0098DB;
+            margin-bottom: 20px;
+        }        
+        .div9_img {
+            padding: 20px;
+            width: 120px;
+            height: 150px;
+        }
+        .div9_strong1 {
+            font-weight: 700
+        }
+        .div9_icon {
+            width: 1em;
+            height: 1em;
+        }        
+        .div9_ul1 {
+            list-style: none;
+            padding: 5px 0px;
+            font-size: 12px;
+        }        
+        .div9_div1 {
+            background-color: #B5B1B1;
+            margin-top: 20px;
+            margin-left: 10px;
+            padding: 10px;
+            font-size: 16px;
+            height: 30px;
+        }        
+        .div9_div2 {
+            background-color: #847f7f;
+            color: #000000;
+            padding: 10px;
+            margin: 20px;
+            /* margin-left: 38%;
+            font-size: 100%; */
+        }        
+        .div9_1_2 {
+            border: 1px solid #eeeeee;
+            border-left: 6px solid #0098DB;
+            margin-bottom: 20px;
+        }        
+        .fa-bars:before {
+            content: "\f0c9";
+        }        
+        #div10 {
+            background-color: rgba(32, 44, 69, 0.9);
+        }        
+        #div10_1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-left: 7%;
+            margin-right: 7%;
+            padding: 20px 0;
+            text-align: center;
+        }        
+        #div10_1 div {
+            margin-right: 60px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }        
+        .div10_img {
+            max-width: 100%;
+            vertical-align: middle;
+        }        
+        .div10_h2 {
+            font-size: 2.71428571rem;
+            color: #fff;
+            font-weight: 500;
+            text-align: center;
+            margin: 0 auto;
+        }        
+        .div10_h5 {
+            font-size: 14px;
+            color: white;
+            text-align: center;
+            margin: 0 auto;
+        }        
+        #div11 {
+            background-color: #f7f7f7;
+            margin-top: 20px;
+        }        
+        #div11_1 {
+            margin-left: 7%;
+            margin-right: 7%;
+        }        
+        .div11_h2 {
+            text-transform: uppercase;
+            font-size: 30px;
+        }        
+        .div11_ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            padding-top: 20px;
+        }        
+        .div11_li {
+            padding: 10px 10px;
+        }        
+        #div11_1_1 {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 10px;
+            padding-bottom: 0px;
+        }        
+        #div11_1_1 div {
+            max-width: 24%;
+        }        
+        .div11_img {
+            max-width: 100%;
+        }        
+        #div11_1_2 {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 10px;
+            margin-top: -5px;
+        }        
+        #div11_1_2 div {
+            width: 24%;
+            background-color: #fff;
+        }        
+        .div11_h3 {
+            margin-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            font-size: 16px;
+        }        
+        #div11_1_3 {
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+            padding-bottom: 20px;
+        }        
+        #div11_1_3 div {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            MARGIN: 5px;
+            border: 1px solid black;
+        }        
+        #div12 {
+            background-color: rgba(32, 44, 69, 0.9);
+        }        
+        #div12_1 {
+            margin-left: 7%;
+            margin-right: 7%;
+            display: flex;
+            justify-content: space-between;
+        }        
+        .div12_h3 {
+            color: #d3d3d3;
+            font-weight: 600;
+            font-size: 24px;
+        }
+        .div12_p {
+            color: #fff;
+            padding-top: 10px;
+        }
+        #div12_1>div {
+            width: 48%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .div12_video {
+            max-width: 100%;
+            height: auto;
+        }
+        .div_timepass {
+            background-color: #0098DB;
+            color: white;
+            padding: 10px 15px;
+            width: 15%;
+            margin-top: 5px;
+        }
+        #div13_1 {
+            margin-left: 7%;
+            margin-right: 7%;
+            display: grid;
+            grid-template-columns: 48% 48%;
+            justify-content: space-between;
+        }        
+        .div13_h3 {
+            text-transform: uppercase;
+            font-size: 24px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            color: #333333;
+            margin: 40px 0;
+        }
+        .div13_icon {
+            width: 1.2em;
+            height: 1.2em;
+        }
+        .div13_span {
+            color: white;
+            font-size: 12px;
+            background-color: #0098DB;
+            padding: 5px 10px;
+        }        
+        .fa {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+        }        
+        .fa-bars:before {
+            content: "\f0c9";
+        }        
+        #div14_1 {
+            margin-left: 7%;
+            margin-right: 7%;
+            display: grid;
+            grid-template-columns: 48% 48%;
+            justify-content: space-between;
+        }        
+        .div14_strong {
+            color: #000000;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 10px 10px;
+        }        
+        .div14_ul {
+            list-style: none;
+            padding: 0px 10px;
+            font-size: 12px;
+        }        
+        .div14_1_1 {
+            border: 1px solid #eeeeee;
+            border-left: 6px solid #0098DB;
+            margin-bottom: 20px;
+        }        
+        .div14_icon {
+            height: 1em;
+            width: 1em;
+        }        
+        .div14_1_1 li {
+            line-height: 24px;
+        }        
+        .div14_1_1 h3 {
+            margin-top: 10px;
+        }
+        
+        #div15 {
+            background-color: #202C45;
+        }        
+        #div15_1 {
+            margin-left: 7%;
+            margin-right: 7%;
+            display: flex;
+            justify-content: space-evenly;
+        }        
+        #div15_1 div {
+            width: 20%;
+            padding: 20px 0;
+        }
+        #div16_1 {
+            margin-left: 7%;
+            margin-right: 7%;
+            display: grid;
+            grid-template-columns: 48% 48%;
+            justify-content: space-between;
+        }        
+        .div16_h3 {
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            line-height: 1.42857143;
+            color: #333333;
+            font-size: 24px;
+            margin: 40px 0;
+        }        
+        .div16_icon {
+            width: 1.2em;
+            height: 1.2em;
+        }        
+        .div16_span {
+            color: #0098DB;
+        }        
+        #div17_1 {
+            margin-left: 7%;
+            margin-right: 7%;
+            display: grid;
+            grid-template-columns: 48% 45%;
+            justify-content: start;
+        }        
+        #div17_1>div {
+            position: relative;
+            margin-top: 20px;
+        }
+        .div17_img1 {
+            position: absolute;
+            width: 485px;
+            height: 225px;
+        }        
+        .div17_img2 {
+            max-width: 485px;
+            max-height: 485px;
+            height: auto;
+            position: relative;
+            top: 177px;
+        }        
+        .div17_img3 {
+            width: 50px;
+            height: 50px;
+            border: 2px solid white;
+            margin: 5px;
+        }        
+        .div17_h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            display: inline-block;
+        }        
+        #timepass {
+            position: absolute;
+            top: 0px;
+            width: 485px;
+            background: linear-gradient( to bottom, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+        #div17_1_2 {
+            border: 1px solid black;
+            border-radius: 10px;
+            border-color: rgb(207, 217, 222);
+            margin-left: 40px;
+        }        
+        .div17_span1 {
+            font-family: inherit;
+            color: inherit;
+            font: inherit;
+            font-size: 18px;
+            font-weight: 700;
+        }        
+        .div17_span2 {
+            color: white;
+            font-weight: 700;
+            background-color: rgb(15, 20, 25);
+            border-radius: 1em;
+            padding: 5px 10px;
+            float: right;
+        }        
+        .div17_img4 {
+            width: 2.5em;
+            height: 2.5em;
+            margin-top: 40px;
+            margin-left: 80px;
+            margin-bottom: 50px;
+        }        
+        .div17_h3_2 {
+            color: rgb(15, 20, 25);
+            font-weight: 800;
+            font-size: 31px;
+            margin-left: 80px;
+            margin-right: auto;
+        }        
+        .div17_p {
+            margin-left: 80px;
+        }
+        #timepass2 {
+            color: white;
+            font-weight: 700;
+            font-size: 15px;
+            background-color: rgb(26, 140, 216);
+            padding: 15px 20px;
+            border-radius: 100px;
+            margin-left: 80px;
+            margin-top: 40px;
+            width: 30%;
+            text-align: center;
+        }        
+        #div18 {
+            background-color: rgba(17, 17, 17, 0.9);
+            padding: 0px 100px 100px 100px;
+        }        
+        #div18_1 {
+            margin-left: 7%;
+            margin-right: 7%;
+            display: flex;
+            justify-content: space-evenly;
+        }        
+        .div18_img {
+            height: 240px;
+            width: 100%;
+            margin-top: 35px;
+            margin-bottom: 20px;
+        }
+        .div18_p {
+            color: #808080;
+            margin-bottom: 10px;
+            margin: 0 0 10px;
+            font-size: 100%;
+        }        
+        .div18_h4 {
+            color: #fff;
+            margin: 0;
+            margin-bottom: 20px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            font-size: 18px;
+        }        
+        .div18_ul {
+            margin-top: 5px;
+            padding-left: 0px;
+            list-style: none;
+            font-size: 100%;
+        }
+        .div18_li {
+            color: #808080;
+            padding-bottom: 5px;
+            text-decoration: none;
+        }
+        .div18_li2 {
+            display: inline-block;
+            float: left;
+            padding-right: 15px;
+        }
+        .div18_li3 {
+            color: #808080;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            font-size: 100%;
+            margin-left: 15px;
+        }
+        #div18_1 div {
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+    <div id="main_div">
+        <div id="div1">
+            <div id="div1_1">
+                <ul class="div1_ul1">
+                    <li>MSUB Webmail</li>
+                    <li>|</li>
+                    <li>RTI Act</li>
+                    <li>|</li>
+                    <li>Academic Calender</li>
+                    <li>|</li>
+                    <li>Useful Links</li>
+                    <li>|</li>
+                    <li>Contact Us</li>
+                    <li>|</li>
+                    <li>MSUB Staff</li>
+                    <li>|</li>
+                    <li>Old Website</li>
+                </ul>
+                <ul class="div1_ul2">
+                    <li><img class="div1_img" src="images\facebook.png"></li>
+                    <li><img class="div1_img" src="images\twitter.png"></li>
+                    <li><img class="div1_img" src="images\you_tube.jpg"></li>
+                    <li><img class="div1_img" src="images\linkedin.png"></li>
+                    <li><img class="div1_img" src="images\instagram.png"></li>
+                </ul>
+            </div>
+        </div>
+        <div id="div2">
+            <div id="div2_1">
+                <div><img class="div2_img" src="https://msubaroda.ac.in/asset/images/msulogo412.png"></div>
+                <div>
+                    <h1>the maharaja sayajirao university of baroda</h1>
+                </div>
+                <div><img class="div2_img" src="https://msubaroda.ac.in/asset/images/logo/t41.png"></div>
+            </div>
+        </div>
+        <div id="div3">
+            <div id="div3_1">
+                <ul class="div3_ul1">
+                    <li><img class="div3_img" src="images/house.png"></li>
+                    <li>About MSUB</li>
+                    <li>Governance and Administration</li>
+                    <li>Academics</li>
+                    <li>Student Corner</li>
+                    <li>IQAC</li>
+                    <li>Research</li>
+                    <li>Central Facilities</li>
+                    <li>NIRF</li>
+                </ul>
+            </div>
+        </div>
+        <div id="div4">
+            <div>
+                <ul class="div4_ul">
+                    <li class="div4_li">Examination Schedule</li>
+                    <li class="div4_li">The MSU Union</li>
+                    <li class="div4_li">MSUB Exam Manager</li>
+                    <li class="div4_li">Moodle</li>
+                    <li class="div4_li">Student Recognitions</li>
+                    <li class="div4_li">Student Acheivements</li>
+                </ul>
+            </div>
+            <div>
+                <img class="div4_img" src="https://msu-new-2023-ec2-ubuntu-unzip.s3.ap-south-1.amazonaws.com/asset/storage/slider/vlcsnap-2021-09-01-15h40m27s399.jpg">
+            </div>
+            <div>
+                <ul class="div4_ul">
+                    <li class="div4_li">Annual Report</li>
+                    <li class="div4_li">Notifications</li>
+                    <li class="div4_li">Accreditation</li>
+                    <li class="div4_li">Ranking</li>
+                    <li class="div4_li">Staff Recognitions</li>
+                    <li class="div4_li">Staff Acheivements</li>
+                </ul>
+            </div>
+        </div>
+        <div id="div5">
+            <div id="div5_1">
+                <div class="div5_1_1" style="background-color: #da670f"><img src="https://msubaroda.ac.in/asset/images/icon/Admissions.png" class="div5_img"> Admissions</div>
+                <div class="div5_1_1" style="background-color: #A01F40"><img src="https://msubaroda.ac.in/asset/images/icon/Alumni.png" class="div5_img"> Alumni</div>
+                <div class="div5_1_1" style="background-color: #d72b2b"><img src="https://msubaroda.ac.in/asset/images/icon/H-M-Library.png" class="div5_img"> H.M. Library</div>
+                <div class="div5_1_1" style="background-color: #48cfad"><img src="https://msubaroda.ac.in/asset/images/icon/Gujarat-SET.png" class="div5_img"> Gujarat SET</div>
+                <div class="div5_1_1" style="background-color: #777293"><img src="https://msubaroda.ac.in/asset/images/icon/Glance.png" class="div5_img"> MSUB At Glance</div>
+                <div class="div5_1_1" style="background-color: #ef6f56"><img src="https://msubaroda.ac.in/asset/images/icon/Useful-Links.png" class="div5_img"> Useful Links</div>
+                <div class="div5_1_1" style="background-color: #da670f"><img src="https://msubaroda.ac.in/asset/images/icon/MSU-Digital.png" class="div5_img"> MSUB Digital</div>
+                <div class="div5_1_1" style="background-color: #A01F40"><img src="https://msubaroda.ac.in/asset/images/icon/Recruitment.png" class="div5_img"> Recruitment</div>
+                <div class="div5_1_1" style="background-color: #d72b2b"><img src="https://msubaroda.ac.in/asset/images/icon/Events.png" class="div5_img"> MSUB Events</div>
+                <div class="div5_1_1" style="background-color: #48cfad"><img src="https://msubaroda.ac.in/asset/images/icon/CCC-Exam.png" class="div5_img"> CCC Exam</div>
+                <div class="div5_1_1" style="background-color: #777293"><img src="https://msubaroda.ac.in/asset/images/icon/MSUB-Connect.png" class="div5_img"> MSUB Connect</div>
+                <div class="div5_1_1" style="background-color: #ef6f56"><img src="https://msubaroda.ac.in/asset/images/icon/Tender.png" class="div5_img"> MSUB Journal</div>
+            </div>
+        </div>
+        <div id="div6">
+            <ul class="div6_ul1">
+                <li class="div6_li">PROF. SUDHIRKUMAR SAXENA JANMASHATABDI MAHOTSAV SAMAPAN SAMAROH</li>
+                <li class="div6_li">|</li>
+                <li class="div6_li">Online lecture series</li>
+                <li class="div6_li">|</li>
+                <li class="div6_li">Online lecture series</li>
+            </ul>
+        </div>
+        <div id="div7">
+            <div id="div7_1">
+                <div>
+                    <h3 class="div7_h3">Welcome To</h3>
+                    <h4 class="div7_h4">THE MAHARAJA SAYAJIRAO UNIVERSITY OF BARODA</h4>
+                    <p class="div7_p">
+                        The Maharaja Sayajirao's grandson Sir Pratapsinghrao Gaekwad who founded the Maharaja Sayajirao University and settled the trust as desired by his grandfather. This Trust known as Sir Sayajirao Diamond Jubilee and Memorial Trust exists today also and
+                        caters to the educationals and other needs of the people of the former state of Baroda.
+                    </p>
+                    <p class="div7_p">
+                        Sir Pratapsinghrao Gaekwad</br>
+                        Founder of The M S University of Baroda
+                    </p>
+                </div>
+                <div>
+                    <img src="https://msubaroda.ac.in/asset/images/team/Foundermsu.jpg" class="div7_img">
+                </div>
+            </div>
+        </div>
+        <div id="div8">
+            <div id="div8_1">
+                <div>
+                    <h3 class="div8_h3 line-bottom"> <img src="images/news.png" class="div8_icon"> MSUB IN <span style="color:#0098DB">NEWS</span></h3>
+                    <span class="div8_span">VEIW ALL</span>
+                </div>
+                <div>
+                    <h3 class="div8_h3 line-bottom"> <img src="images/event.jpg" class="div8_icon"> MSUB <span style="color:#0098DB">EVENTS</span></h3>
+                    <span class="div8_span">VEIW ALL</span>
+                </div>
+            </div>
+        </div>
+        <div id="div9">
+            <div id="div9_1">
+                <div class="div9_1_1">
+                    <div><img src="https://msu-new-2023-ec2-ubuntu-unzip.s3.ap-south-1.amazonaws.com/asset/storage/news/25-06-2023_db%20thum.jpg" class="div9_img"></div>
+                    <div style="font-size:16px;margin-top: 20px;">
+                        <strong class="div9_strong1">  
+તબલાના જન્મદાતા ૧૩મી સદીના અમીર ખુશરો નહીં ,૧૧ મી સદીના સ્વાતિ મુનિ છે
+                        </strong>
+                        <ul class="div9_ul1">
+                            <li><img class="div9_icon" src="images/event.jpg"> 25-09-2023</li>
+                            <li><strong class="div9_strong1">News Paper:.</strong></li>
+                            <li><strong class="div9_strong1">Edition:</strong> Vadodara</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="div9_1_2">
+                    <div style="display:flex">
+                        <div class="div9_div1">18</div>
+                        <div class="div9_div1">JUL</div>
+                        <div class="div9_div1">2024</div>
+                        <div class="div9_div2">COMPETITION</div>
+                    </div>
+                    <div style="font-size:16px;padding-left:10px">
+                        <strong class="div9_strong1">
+                       MAHARAJA SAYAJIRAO VAAD-VIVAD PRATISPRADHA-2024
+                    </strong>
+                        <ul class="div9_ul1">
+                            <li><img class="div9_icon" src="images/event.jpg"> Faculty of Arts</li>
+                            <li><img class="div9_icon" src="images/event.jpg"> Department of Hindi</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="div9_1_1">
+                    <div><img src="https://msu-new-2023-ec2-ubuntu-unzip.s3.ap-south-1.amazonaws.com/asset/storage/news/25-06-2023_db%20thum.jpg" class="div9_img"></div>
+                    <div style="font-size:16px;margin-top: 20px">
+                        <strong class="div9_strong1">
+મોહંમદ માંકડે સતત ૭૫ વર્ષ સુધી લેખનકાર્ય કરીને ગુજરાતી સાહિત્ય જગતને સમૃદ્ર બનાવ્યું
+                    </strong>
+                        <ul class="div9_ul1">
+                            <li><img class="div9_icon" src="images/event.jpg"> 24-09-2023</li>
+                            <li><strong class="div9_strong1">News Paper:.</strong></li>
+                            <li><strong class="div9_strong1">Edition:</strong> Vadodara</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="div9_1_2">
+                    <div style="display: flex">
+                        <div class="div9_div1">13</div>
+                        <div class="div9_div1">JUL</div>
+                        <div class="div9_div1">2024</div>
+                        <div class="div9_div2"> CONFERENCE</div>
+                    </div>
+                    <div style="font-size:16px;padding-left:10px">
+                        <strong class="div9_strong1">
+                NATIONAL CONFERENCE ON DESIGN,ANALYSIS AND OPTIMIZATION IN MECHANICAL ENGINEERING (DAOME)
+                    </strong>
+                        <ul class="div9_ul1">
+                            <li><img class="div9_icon" src="images/event.jpg">Faculty of Technology and Engineering</li>
+                            <li><img class="div9_icon" src="images/event.jpg"> Department of Mechanical Engineering</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="div9_1_1">
+                    <div><img src="https://msu-new-2023-ec2-ubuntu-unzip.s3.ap-south-1.amazonaws.com/asset/storage/news/25-06-2023_db%20thum.jpg" class="div9_img"></div>
+                    <div style="font-size:16px;margin-top: 20px">
+                        <strong class="div9_strong1">
+૨૦૦૦ વર્ષ પહેલા ભારતમાં આંખ અને કાનની પ્લાસ્ટિક સર્જરી થતી હતી.            
+                    </strong>
+                        <ul class="div9_ul1">
+                            <li><img class="div9_icon" src="images/event.jpg"> 25-08-2023</li>
+                            <li><strong class="div9_strong1">News Paper:.</strong></li>
+                            <li><strong class="div9_strong1">Edition:</strong> Vadodara</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="div9_1_2">
+                    <div style="display: flex">
+                        <div class="div9_div1">22</div>
+                        <div class="div9_div1">MAY</div>
+                        <div class="div9_div1">2024</div>
+                        <div class="div9_div2"> STUDENT EVENT</div>
+                    </div>
+                    <div style="font-size:16px;padding-left:10px">
+                        <strong class="div9_strong1">
+                       SCHOLARSHIP, FINANCIAL ASSISTANCE, FEEWAIVER AND / OR FREESHIP 2023-24 FROM THE STUDENTS STUDIED IN YEAR 2023-.....
+                    </strong>
+                        <ul class="div9_ul1">
+                            <li><img class="div9_icon" src="images/event.jpg"> Directorate of Students’ Welfare</li>
+                            <li><img class="div9_icon" src="images/event.jpg">Office</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="div9_1_1">
+                    <div><img src="https://msu-new-2023-ec2-ubuntu-unzip.s3.ap-south-1.amazonaws.com/asset/storage/news/25-06-2023_db%20thum.jpg" class="div9_img"></div>
+                    <div style="font-size:16px;margin-top: 20px">
+                        <strong class="div9_strong1">     
+‘Sanatan literature’ to be taught as value-added course                              
+                    </strong>
+                        <ul class="div9_ul1">
+                            <li><img class="div9_icon" src="images/event.jpg"> 22-08-2023</li>
+                            <li><strong class="div9_strong1">News Paper:.</strong></li>
+                            <li><strong class="div9_strong1">Edition:</strong> Vadodara</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="div9_1_2">
+                    <div style="display: flex">
+                        <div class="div9_div1">22</div>
+                        <div class="div9_div1">FEB</div>
+                        <div class="div9_div1">2024</div>
+                        <div class="div9_div2"> SEMINAR</div>
+                    </div>
+                    <div style="font-size:16px;padding-left:10px">
+                        <strong class="div9_strong1">
+                       TWO DAY INTERNATIONAL SEMINAR ON 22-23 FEB 2024.
+                    </strong>
+                        <ul class="div9_ul1">
+                            <li><img class="div9_icon" src="images/event.jpg"> Faculty of Performing Arts</li>
+                            <li><img class="div9_icon" src="images/event.jpg"> Department of Instrumental (Sitar-Violin)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="div9_1_1">
+                    <div><img src="https://msu-new-2023-ec2-ubuntu-unzip.s3.ap-south-1.amazonaws.com/asset/storage/news/25-06-2023_db%20thum.jpg" class="div9_img"></div>
+                    <div style="font-size:16px;margin-top: 20px">
+                        <strong class="div9_strong1">  
+૧૫૦ વર્ષ જૂની પદ્ધતિથી આટ્સના હેરીટેજ બિલ્ડિંગનું રિસ્ટોરેશન શરૂ                                                  
+                    </strong>
+                        <ul class="div9_ul1">
+                            <li><img class="div9_icon" src="images/event.jpg"> 22-08-2023</li>
+                            <li><strong class="div9_strong1">News Paper:.</strong></li>
+                            <li><strong class="div9_strong1">Edition:</strong> Vadodara</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="div9_1_2">
+                    <div style="display: flex">
+                        <div class="div9_div1">21</div>
+                        <div class="div9_div1">FEB</div>
+                        <div class="div9_div1">2024</div>
+                        <div class="div9_div2"> WORKSHOP</div>
+                    </div>
+                    <div style="font-size:16px;padding-left:10px">
+                        <strong class="div9_strong1">
+                       INTERNATIONAL WORKSHOP
+                    </strong>
+                        <ul class="div9_ul1">
+                            <li><img class="div9_icon" src="images/event.jpg"> Faculty of Performing Arts</li>
+                            <li><img class="div9_icon" src="images/event.jpg"> Department of Instrumental (Sitar-Violin)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="div10">
+            <div id="div10_1">
+                <div class="div10_div1">
+                    <img class="div10_img" src="https://msubaroda.ac.in/asset/storage/icon/MSU-SINCE.png">
+                    <h2 class="div10_h2">1,949</h2>
+                    <h5 class="div10_h5">MSU ESTABLISHED</h5>
+                </div>
+                <div class="div10_div1">
+                    <img class="div10_img" src="https://msubaroda.ac.in/asset/storage/icon/Happy-Student.png">
+                    <h2 class="div10_h2">47,000+</h2>
+                    <h5 class="div10_h5">HAPPY STUDENTS</h5>
+                </div>
+                <div class="div10_div1">
+                    <img class="div10_img" src="https://msubaroda.ac.in/asset/storage/icon/Teaching-staff.png">
+                    <h2 class="div10_h2">939</h2>
+                    <h5 class="div10_h5">TEACHING STAFF</h5>
+                </div>
+                <div class="div10_div1">
+                    <img class="div10_img" src="https://msubaroda.ac.in/asset/storage/icon/Non-teaching-staff.png">
+                    <h2 class="div10_h2">548</h2>
+                    <h5 class="div10_h5">NON-TEACHING STAFF</h5>
+                </div>
+                <div class="div10_div1">
+                    <img class="div10_img" src="https://msubaroda.ac.in/asset/storage/icon/PH.D-SCHOLARS.png">
+                    <h2 class="div10_h2">1,100+</h2>
+                    <h5 class="div10_h5">P.H.D. SCHOLARS</h5>
+                </div>
+                <div class="div10_div1">
+                    <img class="div10_img" src="https://msubaroda.ac.in/asset/storage/icon/research-project.png">
+                    <h2 class="div10_h2">372</h2>
+                    <h5 class="div10_h5">RESEARCH PROJECTS</h5>
+                </div>
+                <div class="div10_div1">
+                    <img class="div10_img" src="https://msubaroda.ac.in/asset/storage/icon/ACADEMICS-INSTITUTES.png">
+                    <h2 class="div10_h2">38</h2>
+                    <h5 class="div10_h5">ACADEMICS INSTITUTES</h5>
+                </div>
+                <div class="div10_div1">
+                    <img class="div10_img" src="https://msubaroda.ac.in/asset/storage/icon/OUR-DEPARTMENTS.png">
+                    <h2 class="div10_h2">111</h2>
+                    <h5 class="div10_h5">OUR DEPARTMENTS</h5>
+                </div>
+                <div class="div10_div1">
+                    <img class="div10_img" src="https://msubaroda.ac.in/asset/storage/icon/COURSES-OFFERED.png">
+                    <h2 class="div10_h2">252</h2>
+                    <h5 class="div10_h5">PROGRAMMES OFFERED</h5>
+                </div>
+                <div class="div10_div1">
+                    <img class="div10_img" src="https://msubaroda.ac.in/asset/storage/icon/AWARDS-WON.png">
+                    <h2 class="div10_h2">68</h2>
+                    <h5 class="div10_h5">PHD DISCIPLINES</h5>
+                </div>
+            </div>
+        </div>
+        <div id="div11">
+            <div id="div11_1">
+                <div>
+                    <h2 class="div11_h2 line-bottom">our <span style="color:#0098DB">academics</span></h2>
+                </div>
+                <div>
+                    <ul class="div11_ul">
+                        <li class="div11_li" style="border:1px solid #ddd">Faculties</li>
+                        <li class="div11_li">Colleges</li>
+                        <li class="div11_li">Institutes</li>
+                        <li class="div11_li">Schools</li>
+                    </ul>
+                </div>
+                <div style="border:1px solid #ddd">
+                    <div id="div11_1_1">
+                        <div><img class="div11_img" src="https://msu-new-2023-ec2-ubuntu-unzip.s3.ap-south-1.amazonaws.com/asset/storage/academics/arts-squareimage.png"></div>
+                        <div><img class="div11_img" src="https://msu-new-2023-ec2-ubuntu-unzip.s3.ap-south-1.amazonaws.com/asset/storage/academics/techo-home.png"></div>
+                        <div><img class="div11_img" src="https://msu-new-2023-ec2-ubuntu-unzip.s3.ap-south-1.amazonaws.com/asset/storage/academics/law-home.jpg"></div>
+                        <div><img class="div11_img" src="https://msu-new-2023-ec2-ubuntu-unzip.s3.ap-south-1.amazonaws.com/asset/storage/academics/socialwork-home.jpg"></div>
+                    </div>
+                    <div id="div11_1_2">
+                        <div>
+                            <h3 class="div11_h3 line-bottom">Faculty of Arts</h3>
+                        </div>
+                        <div>
+                            <h3 class="div11_h3 line-bottom">Faculty of Technology and Engineering</h3>
+                        </div>
+                        <div>
+                            <h3 class="div11_h3 line-bottom">Faculty of Law</h3>
+                        </div>
+                        <div>
+                            <h3 class="div11_h3 line-bottom">Faculty of Social Work</h3>
+                        </div>
+                    </div>
+                    <div id="div11_1_3">
+                        <div></div>
+                        <div style="background-color: #000;"></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="div12">
+            <div id="div12_1">
+                <div>
+                    <video class="div12_video" width="620 " height="620 " controls><source src="https://msubaroda.ac.in/asset/images/VID-20200430-WA0000.mp4 " type="video/mp4 "> </video>
+                </div>
+                <div>
+                    <h3 class="div12_h3">Want to join With Us?</h3>
+                    <h3 class="div12_h3" style="color:#fff;font-size: 22px">THE MAHARAJA SAYAJIRAO UNIVERSITY OF BARODA</h3>
+                    <P class="div12_p">
+                        India's internationally renowned The Maharaja Sayajirao University of Baroda (1949) has blossomed from the Baroda College (1881) which is one of the oldest centres of learning in western India. MSU is the only state University with a residential, unitary
+                        character having English as sole medium of instruction with more than 1200 well-qualified faculty members and 1500 administrative staff to facilitate the learning of more than 35000 students having cosmopolitan life on campus.
+                    </P>
+                    <div class="div_timepass">Read More</div>
+                </div>
+            </div>
+        </div>
+        <div id="div13">
+            <div id="div13_1">
+                <div>
+                    <h3 class="div13_h3 line-bottom"><img class="div13_icon" src="images/notification.jpg"> notifications <span class="div13_span">veiw all</span></h3>
+                </div>
+                <div>
+                    <h3 class="div13_h3 line-bottom"><img class="div13_icon" src="images/circular.png"> circulars <span class="div13_span">veiw all</span></h3>
+                </div>
+            </div>
+        </div>
+        <div id="div14">
+            <div id="div14_1">
+                <div class="div14_1_1">
+                    <h3><strong class="div14_strong">BCA ADMISSION MERIT LIST FOR REMAINING SEATS.</strong></h3>
+                    <ul class="div14_ul">
+                        <li><img class="div14_icon" src="images/event.jpg"> 22-07-2024 <i class="fa fa-bars" aria-hidden="true"></i>Admission</li>
+                        <li><img class="div14_icon" src="images/event.jpg"> Faculty of Education and Psycology</li>
+                        <li><img class="div14_icon" src="images/event.jpg"> Department of Psycology</li>
+                    </ul>
+                </div>
+                <div class="div14_1_1">
+                    <h3><strong class="div14_strong">BCOM HONOURS STRUCTURE ,BCOM I AND BCOM II</strong></h3>
+                    <ul class="div14_ul">
+                        <li><img class="div14_icon" src="images/event.jpg"> 22-07-2024 <i class="fa fa-bars" aria-hidden="true"></i>Circular</li>
+                        <li><img class="div14_icon" src="images/event.jpg"> Faculty of Science</li>
+                        <li><img class="div14_icon" src="images/event.jpg"> Department of Zoology</li>
+                    </ul>
+                </div>
+                <div class="div14_1_1">
+                    <h3><strong class="div14_strong">QUOTATION FOR GOLD MEDAL</strong></h3>
+                    <ul class="div14_ul">
+                        <li><img class="div14_icon" src="images/event.jpg"> 21-07-2024 <i class="fa fa-bars" aria-hidden="true"></i>Admission</li>
+                        <li><img class="div14_icon" src="images/event.jpg"> Faculty of Law</li>
+                        <li><img class="div14_icon" src="images/event.jpg"> Department of Law</li>
+                    </ul>
+                </div>
+                <div class="div14_1_1">
+                    <h3><strong class="div14_strong">TIME TABLE FOR FSBCOM III AND FSBCOM II</strong></h3>
+                    <ul class="div14_ul">
+                        <li><img class="div14_icon" src="images/event.jpg"> 22-07-2024 <i class="fa fa-bars" aria-hidden="true"></i>Circular</li>
+                        <li><img class="div14_icon" src="images/event.jpg"> Faculty of Science</li>
+                    </ul>
+                </div>
+                <div class="div14_1_1">
+                    <h3><strong class="div14_strong">DETAILS FOR ENTRANCE EXAM 2024-25,ALL INDIA CENTRAL SER.....</strong></h3>
+                    <ul class="div14_ul">
+                        <li><img class="div14_icon" src="images/event.jpg"> 21-07-2024 <i class="fa fa-bars" aria-hidden="true"></i>Admission</li>
+                        <li><img class="div14_icon" src="images/event.jpg"> Faculty of Law</li>
+                        <li><img class="div14_icon" src="images/event.jpg"> Department of Law</li>
+                    </ul>
+                </div>
+                <div class="div14_1_1">
+                    <h3><strong class="div14_strong">E NEWSLETTERS OF POLYTECHNIC COLLEGE,INSIGHT FOR A.Y. 2......</strong></h3>
+                    <ul class="div14_ul">
+                        <li><img class="div14_icon" src="images/event.jpg"> 22-07-2024 <i class="fa fa-bars" aria-hidden="true"></i>Circular</li>
+                        <li><img class="div14_icon" src="images/event.jpg"> Faculty of Science</li>
+                        <li><img class="div14_icon" src="images/event.jpg"> Department of Botany</li>
+                    </ul>
+                </div>
+                <div class="div14_1_1">
+                    <h3><strong class="div14_strong">M.SC. BIOCHEMISTRY THIRD PROVISIONAL ADMISSION LIST 202.....</strong></h3>
+                    <ul class="div14_ul">
+                        <li><img class="div14_icon" src="images/event.jpg"> 21-07-2024 <i class="fa fa-bars" aria-hidden="true"></i>Admission</li>
+                        <li><img class="div14_icon" src="images/event.jpg"> Faculty of Arts</li>
+                        <li><img class="div14_icon" src="images/event.jpg"> Office</li>
+                    </ul>
+                </div>
+                <div class="div14_1_1">
+                    <h3><strong class="div14_strong">VOCAL THIRD PROVISIONAL ADMISSION LIST OF UG 2024 - 25.......</strong></h3>
+                    <ul class="div14_ul">
+                        <li><img class="div14_icon" src="images/event.jpg"> 21-07-2024 <i class="fa fa-bars" aria-hidden="true"></i>Circular</li>
+                        <li><img class="div14_icon" src="images/event.jpg"> Faculty of Pharmacy</li>
+                        <li><img class="div14_icon" src="images/event.jpg"> Department of Pharmacy</li>
+                    </ul>
+                </div>
+                <div class="div14_1_1">
+                    <h3><strong class="div14_strong">VOCAL THIRD PROVISIONAL ADMISSION LIST OF UG 2024 - 25......</strong></h3>
+                    <ul class="div14_ul">
+                        <li><img class="div14_icon" src="images/event.jpg"> 20-07-2024 <i class="fa fa-bars" aria-hidden="true"></i>Admission</li>
+                        <li><img class="div14_icon" src="images/event.jpg"> Faculty of Family and Community Sciences</li>
+                        <li><img class="div14_icon" src="images/event.jpg"> Department of Foods and Nutrition</li>
+                    </ul>
+                </div>
+                <div class="div14_1_1">
+                    <h3><strong class="div14_strong">E NEWSLETTERS OF POLYTECHNIC COLLEGE,INSIGHT FOR A.Y. 2.....</strong></h3>
+                    <ul class="div14_ul">
+                        <li><img class="div14_icon" src="images/event.jpg"> 21-07-2024 <i class="fa fa-bars" aria-hidden="true"></i>Circular</li>
+                        <li><img class="div14_icon" src="images/event.jpg"> Dr. Vikram Sarabhai Institute of Cell and Molecular Biology</li>
+                        <li><img class="div14_icon" src="images/event.jpg"> Office</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="div15">
+            <div id="div15_1">
+                <div><img class="div15_img" src="https://msubaroda.ac.in/asset/images/clients/t2.png"></div>
+                <div><img class="div15_img" src="https://msubaroda.ac.in/asset/images/clients/t1.png"></div>
+                <div><img class="div15_img" src="https://msubaroda.ac.in/asset/images/clients/t6.png"></div>
+                <div><img class="div15_img" src="https://msubaroda.ac.in/asset/images/clients/t4.png"></div>
+            </div>
+        </div>
+        <div id="div16">
+            <div id="div16_1">
+                <div>
+                    <h3 class="div16_h3 line-bottom"><img class="div16_icon" src="https://www.mmppicture.co.in/wp-content/uploads/2021/03/Facebook-Icon-PNG-68.png"> be social with us <span class="div16_span">@facebook</span></h3>
+                </div>
+                <div>
+                    <h3 class="div16_h3 line-bottom"><img class="div16_icon" src="https://png.pngtree.com/element_our/md/20180520/md_5b01251262721.jpg"> be social with us <span class="div16_span">@twitter</span></h3>
+                </div>
+            </div>
+        </div>
+        <div id="div17">
+            <div id="div17_1">
+                <div id="div17_1_2">
+                    <div style="border-bottom:1px solid rgb(207, 217, 222);padding:20px 10px">
+                        <span class="div17_span1">Tweets From @themsubaroda</span>
+                        <span class="div17_span2">Follow</span>
+                    </div>
+                    <div>
+                        <h3 class="div17_h3_2">Nothing to See Here -</br>yet</h3>
+                        <p class="div17_p">When they tweet,there tweets will show up here</p>
+                        <div id="timepass2">View on Twitter</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="div18">
+            <div id="div18_1">
+                <div>
+                    <img class="div18_img" src="https://msubaroda.ac.in/asset/images/logo/MSU Logo6.png">
+                </div>
+                <div>
+                    <h4 class="div18_h4">Head Office Address</h4>
+                    <p class="div18_p">The M. S. University of Baroda, Pratapgunj, </br>Vadodara, Gujarat-390002</p>
+                    <ul class="div18_ul">
+                        <li class="div18_li"><i class="fa fa-phone text-theme-color-2 mr-5"></i>+91-265-2795555</li>
+                        <li class="div18_li"><i class="fa fa-envelope-o text-theme-color-2 mr-5"></i>info@msubaroda.ac.in</li>
+                        <li class="div18_li"><i class="fa fa-globe text-theme-color-2 mr-5"></i>www.msubaroda.ac.in</li>
+                    </ul>
+                    <ul class="div18_ul">
+                        <li class="div18_li2"><span class="row11_span"><i class="fa fa-facebook"></i></span></li>
+                        <li class="div18_li2"><span class="row11_span"><i class="fa fa-facebook"></i></span></li>
+                        <li class="div18_li2"><span class="row11_span"><i class="fa fa-facebook"></i></span></li>
+                        <li class="div18_li2"><span class="row11_span"><i class="fa fa-facebook"></i></span></li>
+                        <li class="div18_li2"><span class="row11_span"><i class="fa fa-facebook"></i></span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="div18_h4" style="margin-top:10px">Useful Links</h4>
+                    <ul class="div18_ul" style="margin-top:0">
+                        <li class="div18_li3">Admission</li>
+                        <li class="div18_li3">Examination</li>
+                        <li class="div18_li3">MSUB Digital</li>
+                        <li class="div18_li3">MSUB News</li>
+                        <li class="div18_li3">MSUB Contact</li>
+                    </ul>
+
+                </div>
+                <div>
+                    <h4 class="div18_h4">Head Office Working Hours</h4>
+                    <ul class="div18_ul">
+                        <li class="div18_li3">Day:Monday to Saturday</li>
+                        <li class="div18_li3">Time:10:30 am to 06:10 pm</li>
+                        <li class="div18_li3">Closed On:2<sup>nd</sup> and 4<sup>th</sup> saturday</li>
+                        <li class="div18_li3" style="margin-left:85px;margin-top:-20px">Government Approvred Holidays</li>
+                        <li class="div18_li3"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

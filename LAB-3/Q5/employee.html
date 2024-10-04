@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }        
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }        
+        th {
+            background-color: #f2f2f2;
+        }      
+        .header {
+            background-color: #dcdcdc;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header text-center bg-primary text-white">
+                <h5>PLEASE PRINT ALL INFORMATION REQUESTED EXCEPT SIGNATURE</h5>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group row">
+                        <label for="lastName" class="col-sm-2 col-form-label">Last</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                        </div>
+                        <label for="firstName" class="col-sm-2 col-form-label">First</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="middleName" class="col-sm-2 col-form-label">Middle</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="middleName" placeholder="Middle Name">
+                        </div>
+                        <label for="maidenName" class="col-sm-2 col-form-label">Maiden</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="maidenName" placeholder="Maiden Name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="address" class="col-sm-2 col-form-label">Present Address</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="address" placeholder="Number, Street, City, State, Zip">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="howLong" class="col-sm-2 col-form-label">How Long</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="howLong">
+                        </div>
+                        <label for="socialSecurity" class="col-sm-2 col-form-label">Social Security No.</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="socialSecurity">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="telephone" class="col-sm-2 col-form-label">Telephone</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="telephone">
+                        </div>
+                        <label for="age" class="col-sm-2 col-form-label">If under 18, please list age:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="age">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="position" class="col-sm-2 col-form-label">Position Applied For</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="position">
+                        </div>
+                        <label for="salary" class="col-sm-2 col-form-label">Salary Desired</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="salary">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Days/Hours Available to Work</label>
+                        <div class="col-sm-10">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="noPref" value="option1">
+                                <label class="form-check-label" for="noPref">No Pref</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="mon" value="option2">
+                                <label class="form-check-label" for="mon">Mon</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="tue" value="option3">
+                                <label class="form-check-label" for="tue">Tue</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="wed" value="option4">
+                                <label class="form-check-label" for="wed">Wed</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="thu" value="option5">
+                                <label class="form-check-label" for="thu">Thu</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="fri" value="option6">
+                                <label class="form-check-label" for="fri">Fri</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="sat" value="option7">
+                                <label class="form-check-label" for="sat">Sat</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="sun" value="option8">
+                                <label class="form-check-label" for="sun">Sun</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="hours" class="col-sm-2 col-form-label">How many hours can you work weekly?</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="hours">
+                        </div>
+                        <label for="nights" class="col-sm-2 col-form-label">Can you work nights?</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="nights">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Employment Desired</label>
+                        <div class="col-sm-10">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="employmentType" id="fullTime" value="fullTime">
+                                <label class="form-check-label" for="fullTime">Full-Time Only</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="employmentType" id="partTime" value="partTime">
+                                <label class="form-check-label" for="partTime">Part-Time Only</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="employmentType" id="fullOrPartTime" value="fullOrPartTime">
+                                <label class="form-check-label" for="fullOrPartTime">Full- or Part-Time</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="availability" class="col-sm-2 col-form-label">When available for work?</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="availability">
+                        </div>
+                    </div>
+               </form>
+                <div class="card mt-5">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="5" class="header">EDUCATION & OTHER INFORMATION</th>
+                            </tr>
+                            <tr>
+                                <th>TYPE OF SCHOOL</th>
+                                <th>NAME OF SCHOOL</th>
+                                <th>LOCATION (Complete mailing address)</th>
+                                <th>NO. OF YEARS COMPLETED</th>
+                                <th>MAJOR & DEGREE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>High School</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>College</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Bus. or Trade School</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Professional School</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br><br>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+</body>
+</html>
