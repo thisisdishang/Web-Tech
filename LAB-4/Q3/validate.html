@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            background-color: #ffffff;
+            width: 350px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+        
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        h2 {
+            color: #444444;
+            margin-bottom: 25px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .form-group label {
+            font-size: 14px;
+            color: #666666;
+            text-align: left;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+            font-size: 16px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        
+        .form-group input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+        }
+        
+        .error-message {
+            color: #ff4d4f;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        
+        button {
+            width: 120px;
+            background-color: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+        }
+        
+        button[type="reset"] {
+            background-color: #6c757d;
+        }
+        
+        button[type="reset"]:hover {
+            background-color: #5a6268;
+            box-shadow: 0 5px 15px rgba(90, 98, 104, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" />
+                <div id="username-error" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" />
+                <div id="password-error" class="error-message"></div>
+            </div>
+            <button type="submit">Login</button>
+            <button type="reset" style="margin-left: 20px;">Cancel</button>
+        </form>
+    </div>
+
+    <script>
+        function validateUsername(username) {
+            if (username.trim() === "") {
+                return "Username cannot be blank";
+            }
+            if (/^[0-9_@]/.test(username)) {
+                return "Username cannot start with _, @, or any number";
+            }
+            return true;
+        }
+
+        function validatePassword(password) {
+            if (password.trim() === "") {
+                return "Password cannot be blank";
+            }
+            if (password.length < 6 || password.length > 12) {
+                return "Password must be between 6 to 12 characters long";
+            }
+            return true;
+        }
+
+        function validateForm() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            const usernameValidation = validateUsername(username);
+            const passwordValidation = validatePassword(password);
+
+            let isValid = true;
+
+            document.getElementById("username-error").innerText = "";
+            document.getElementById("password-error").innerText = "";
+
+            if (usernameValidation !== true) {
+                document.getElementById("username-error").innerText =
+                    usernameValidation;
+                isValid = false;
+            }
+            if (passwordValidation !== true) {
+                document.getElementById("password-error").innerText =
+                    passwordValidation;
+                isValid = false;
+            }
+            return isValid;
+        }
+    </script>
+</body>
+
+</html>

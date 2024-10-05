@@ -1,0 +1,22 @@
+<html> 
+<head> 
+    <title>jQuery Traversal Example</title> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+</head> 
+<body> 
+    <div id="parent"> 
+        <p>Parent Element</p> 
+        <div> 
+            <p>Child Element</p> 
+        </div> 
+    </div> 
+ 
+    <script> 
+        $(document).ready(function() { 
+            // Using find() to access child elements 
+            const childElement = $('#parent').find('p'); 
+            childElement.css('color', 'blue'); 
+        }); 
+    </script> 
+</body> 
+</html> 

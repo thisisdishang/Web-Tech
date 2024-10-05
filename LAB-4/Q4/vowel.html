@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find String Between 'a'</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #ffecd2, #fcb69f);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        background-color: #fff;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        width: 350px;
+        text-align: center;
+      }
+      h2 {
+        color: #444444;
+        margin-bottom: 25px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      .form-group input[type="text"] {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #ddd;
+        border-radius: 25px;
+        outline: none;
+        font-size: 16px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+      }
+      .form-group input[type="text"]:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+      }
+      .form-group input[type="submit"] {
+        padding: 12px 30px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s;
+      }
+      .form-group input[type="submit"]:hover {
+        background-color: #0056b3;
+        box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+      }
+      #result {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #333;
+        font-weight: bold;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Find String Between 'a'</h2>
+      <form onsubmit="return findBetweenA()" class="form-group">
+        <div>
+          <input type="text" id="word" placeholder="Enter a word" />
+        </div>
+        <div>
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+      <p id="result"></p>
+    </div>
+    <script>
+      function findBetweenA() {
+        const word = document.getElementById("word").value;
+        const firstA = word.indexOf("a");
+        const lastA = word.lastIndexOf("a");
+
+        if (firstA !== -1 && lastA !== -1 && lastA > firstA) {
+          const between = word.substring(firstA + 1, lastA);
+          document.getElementById(
+            "result"
+          ).textContent = `First occurrence: ${firstA + 1}, Last occurrence: ${
+            lastA + 1
+          }, String between: ${between}`;
+        } else {
+          document.getElementById("result").textContent =
+            "No valid occurrences of 'a'";
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Type Writer Effect</title>
+  <style>
+    #typeWriter {
+      font-family: monospace;
+      font-size: 24px;
+      white-space: pre;
+    }
+  </style>
+</head>
+<body>
+
+<div id="typeWriter"></div>
+
+<script>
+  const text = "This is a Type Writer effect using DHTML and JavaScript.";
+  let index = 0;
+
+  function typeWriter() {
+    if (index < text.length) {
+      document.getElementById("typeWriter").innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeWriter, 100);
+    }
+  }
+
+  typeWriter();
+</script>
+
+</body>
+</html>

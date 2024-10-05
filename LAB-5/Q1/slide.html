@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Toggle</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #myDiv {
+            width: 200px;
+            height: 100px;
+            background-color: yellow;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="toggleButton">Toggle</button>
+    <div id="myDiv">This is a div element</div>
+
+    <script>
+        $('#toggleButton').click(function() {
+            $('#myDiv').slideToggle();
+        });
+    </script>
+</body>
+
+</html>

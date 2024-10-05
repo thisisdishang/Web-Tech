@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display JSON Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        #jsonData {
+            margin-top: 20px;
+        }
+        
+        .data-item {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        
+        .data-item h3 {
+            margin: 0;
+            color: #0056b3;
+        }
+        
+        .data-item p {
+            margin: 5px 0;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Display JSON Data on Webpage</h1>
+
+    <button id="loadData">Load Data</button>
+
+    <div id="jsonData"></div>
+
+    <script>
+        const jsonData = [{
+            "name": "Dishang H. Rana",
+            "age": 21,
+            "email": "dishangrana@gmail.com"
+        }];
+
+        function displayJsonData(data) {
+            const jsonDataContainer = document.getElementById('jsonData');
+            jsonDataContainer.innerHTML = '';
+            data.forEach(item => {
+                const dataItem = document.createElement('div');
+                dataItem.className = 'data-item';
+                dataItem.innerHTML = `
+                    <h3>${item.name}</h3>
+                    <p>Age: ${item.age}</p>
+                    <p>Email: ${item.email}</p>
+                `;
+                jsonDataContainer.appendChild(dataItem);
+            });
+        }
+
+        document.getElementById('loadData').addEventListener('click', function() {
+            displayJsonData(jsonData);
+        });
+    </script>
+
+</body>
+
+</html>

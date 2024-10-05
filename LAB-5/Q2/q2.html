@@ -1,0 +1,21 @@
+<html lang="en"> 
+<head> 
+    <title>Document</title> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+</head> 
+<body> 
+ 
+<input type="checkbox" id="terms" value="yes">Terms and Conditions</input> 
+    <button id="submit" disabled>Submit</button> 
+    <script> 
+        $(function() { 
+            $("#terms").change(function() { 
+                if ($(this).is(":checked")) 
+                    $("#submit").prop("disabled", false); 
+                else 
+                    $("#submit").prop("disabled", true); 
+            }) 
+        }); 
+    </script> 
+</body> 
+</html> 

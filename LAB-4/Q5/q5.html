@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse and Key Events</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }    
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f4f7;
+            transition: background-color 0.5s ease;
+        }        
+        .container {
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            width: 350px;
+        }        
+        h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;        }
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }        
+        input:focus {
+            border-color: #66b2ff;
+            box-shadow: 0 4px 12px rgba(102, 178, 255, 0.6);
+        }        
+        .info {
+            font-size: 18px;
+            color: #555;
+            margin-top: 25px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-height: 50px;
+            transition: background-color 0.3s ease;
+        }        
+        .info.active {
+            background-color: #fff7cc;
+            color: #d9534f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Mouse & Key Event Demo</h2>
+        <input type="text" id="inputField" placeholder="Type something here..." autofocus />
+        <div class="info" id="info">Press a key to see its details.</div>
+    </div>
+
+
+    <script>
+        document.getElementById("inputField").addEventListener("keydown", function(event) {
+                let key = event.key;
+                let keyCode = event.keyCode;
+                let infoDiv = document.getElementById("info");
+
+                infoDiv.textContent = `Key pressed: ${key} (Code: ${keyCode})`;
+                infoDiv.classList.remove("active");
+
+                if (["a", "e", "i", "o", "u"].includes(key.toLowerCase())) {
+                    infoDiv.classList.add("active");
+                    setTimeout(() => alert(`Vowel '${key}' is pressed`), 100);
+                }
+            });
+
+        document.getElementById("inputField").addEventListener("keyup", function() {
+                document.body.style.backgroundColor = "#d4edda"; 
+                setTimeout(function() {
+                    document.body.style.backgroundColor = "#f0f4f7"; 
+                }, 1000);
+            });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<html> 
+<head> 
+    <title>Wikipedia API Example</title> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+</head> 
+<body> 
+    <h1>Wikipedia Search Results</h1> 
+    <input type="text" id="searchInput" placeholder="Search on Wikipedia"> 
+    <button id="searchButton">Search</button> 
+    <div id="searchResults"></div> 
+    <script> 
+        $(document).ready(function() { 
+            $('#searchButton').click(function() { 
+                const searchTerm = $('#searchInput').val(); 
+                const url = 
+`https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=${searchTerm}`; 
+                $.ajax({ 
+                    url: url, 
+                    method: 'GET', 
+                    dataType: 'jsonp', 
+                    success: function(data) { 
+                        const searchResults = data.query.search; 
+                        let resultHtml = ''; 
+                        searchResults.forEach(result => { 
+                            console.log("Title"); 
+                            console.log(result.title); 
+                            resultHtml += `<div><h2>${result.title}</h2> 
+                                    <p>${result.snippet}.</p></div>`; 
+                        }); 
+                        $('#searchResults').html(resultHtml); 
+                    }, 
+                    error: function() { 
+                        $('#searchResults').html('Error fetching search results.'); 
+                    } 
+                }); 
+            }); 
+        }); 
+    </script> 
+</body> 
+</html> 
